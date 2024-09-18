@@ -2,6 +2,8 @@
 const express = require ('express');
 const router = express.Router();
 const apiRouter = require('./api');
+const { setTokenCookie } = require('../utils/auth.js');
+const { User } = require('../db/models');
 
 
 router.get("/api/csrf/restore", (req, res) => {
